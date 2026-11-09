@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consent-based Google OAuth tracking demonstration">
+  <title>Consent Tracking Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="eyebrow">CONSENT-BASED DEMO</div>
+      <h1>Google OAuth Tracking Demo</h1>
+      <p>ဒီ website သည် ပညာရေးနှင့် စမ်းသပ်မှုအတွက်သာ ဖြစ်ပါတယ်။ သင့်ခွင့်ပြုချက်မရမချင်း tracking event ကို မသိမ်းပါ။</p>
+      <div class="notice">
+        <h2>ခွင့်ပြုပြီးနောက် စုမည့်အချက်များ</h2>
+        <ul>
+          <li>Google name, Gmail address, profile picture</li>
+          <li>IP address နှင့် ခန့်မှန်း country/city</li>
+          <li>Device type, Android/iPhone/desktop, browser, ဝင်ရောက်ချိန်</li>
+        </ul>
+        <p>Google password ကို မတောင်းပါ။ GPS location ကို မယူပါ။ Data ကို သတ်မှတ်ထားသော retention ကာလအတွင်းသာ သိမ်းပြီး ဖျက်နိုင်ပါသည်။</p>
+      </div>
+      <label class="check"><input id="consent" type="checkbox"> အထက်ပါအချက်များကို ဖတ်ပြီး စမ်းသပ်မှုအတွက် သဘောတူပါသည်။</label>
+      <button id="login" disabled>Google ဖြင့် ဆက်လုပ်မည်</button>
+      <button id="withdraw" class="danger" hidden>ကျွန်ုပ်၏ demo data ဖျက်ပြီး ထွက်မည်</button>
+      <p id="status" class="status" role="status"></p>
+      <div id="profile" class="profile" hidden></div>
+      <p class="fine">OAuth scopes: <code>openid email profile</code> only</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
